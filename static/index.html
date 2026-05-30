@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research Run Platform</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar" aria-label="Research run controls">
+        <div>
+          <p class="eyebrow">Research Data Platform</p>
+          <h1>Run Explorer</h1>
+        </div>
+        <div class="filters" role="search">
+          <label>
+            Model
+            <select id="modelFilter">
+              <option value="">All models</option>
+            </select>
+          </label>
+          <label>
+            Status
+            <select id="statusFilter">
+              <option value="">All statuses</option>
+              <option value="succeeded">Succeeded</option>
+              <option value="failed">Failed</option>
+            </select>
+          </label>
+          <label>
+            Min accuracy
+            <input id="accuracyFilter" type="number" min="0" max="1" step="0.01" placeholder="0.90" />
+          </label>
+          <button id="refreshButton" type="button">Refresh</button>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Metric summary">
+        <div>
+          <span>Total runs</span>
+          <strong id="totalRuns">--</strong>
+        </div>
+        <div>
+          <span>Success</span>
+          <strong id="successfulRuns">--</strong>
+        </div>
+        <div>
+          <span>Avg accuracy</span>
+          <strong id="avgAccuracy">--</strong>
+        </div>
+        <div>
+          <span>Total cost</span>
+          <strong id="totalCost">--</strong>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="tableWrap" aria-label="Run table">
+          <table>
+            <thead>
+              <tr>
+                <th>Run</th>
+                <th>Model</th>
+                <th>Dataset</th>
+                <th>Status</th>
+                <th>Accuracy</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody id="runRows"></tbody>
+          </table>
+        </div>
+
+        <aside class="detail" aria-label="Run detail">
+          <p class="eyebrow">Selected Run</p>
+          <h2 id="detailTitle">Pick a run</h2>
+          <p id="detailNotes" class="notes">Run details, lineage, and event metrics will appear here.</p>
+          <div id="metricBars" class="bars"></div>
+          <h3>Dataset Provenance</h3>
+          <dl id="datasetDetail"></dl>
+          <h3>Events</h3>
+          <ol id="eventList"></ol>
+          <h3>Lineage</h3>
+          <ul id="lineageList"></ul>
+        </aside>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
