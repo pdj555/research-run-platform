@@ -1,6 +1,6 @@
 # Research Run Platform
 
-Research-run data platform proof asset for roles that build tooling close to frontier-model research workflows.
+Research-run data platform sample project for roles that build tooling for frontier-model research workflows.
 
 This is intentionally shaped around a Research Data Platform brief: ingest run data, land it in queryable storage, expose APIs researchers can use, track dataset provenance, and provide a compact web explorer for run analysis.
 
@@ -17,7 +17,7 @@ This repo demonstrates the platform layer around that workflow: DuckDB + Parquet
 
 ## What It Proves
 
-| Hiring Signal | Implementation |
+| Skill | Implementation |
 |---|---|
 | Queryable research-run data | Run, dataset, event, and lineage tables exported to Parquet and queried through DuckDB views |
 | Data products for technical users | FastAPI endpoints and a compact run explorer for filtering, inspection, and provenance |

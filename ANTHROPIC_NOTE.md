@@ -1,6 +1,6 @@
 # Anthropic Research Data Platform Note
 
-This repo is a focused proof asset for the Software Engineer, Research Data Platform role.
+This repo is a focused sample project for the Software Engineer, Research Data Platform role.
 
 It demonstrates the kind of platform layer described in the role:
 
@@ -13,7 +13,7 @@ It demonstrates the kind of platform layer described in the role:
 
 The data is synthetic, but the system shape is real: Parquet files, DuckDB query views, typed API contracts, and a UI designed around the questions researchers ask when they need to understand experiment results.
 
-The point is not to mimic Anthropic internals. The point is to show that I understand the job's product surface: make research data easier to trust, query, inspect, and act on.
+This does not mimic Anthropic internals. It covers the work in the role: make research data easier to trust, query, inspect, and act on.
 
 ## Short Outreach Add-on
 
